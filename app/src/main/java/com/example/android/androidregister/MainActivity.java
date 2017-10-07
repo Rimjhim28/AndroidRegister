@@ -20,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.codingblocks.attendancetracker.R;
 import com.daprlabs.cardstack.SwipeDeck;
 import com.example.android.androidregister.database.BatchesDAO;
 import com.example.android.androidregister.database.DbHelper;
