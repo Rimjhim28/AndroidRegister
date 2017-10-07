@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Attendance Tracker</string>
+    <string name="create_batch">create a new batch!</string>
+    <string name="click_to_change_attendance">Click on student to change attendance</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="btn_text_submit">Submit</string>
+    <string name="swipe_left_present_right_absent">Swipe right for present and left for absent</string>
+    <string name="student_name">Piyush</string>
+    <string name="batch_name">Crux</string>
+    <string name="toast_attendance_is_saved">Today\'s Attendance is saved.</string>
+    <string name="add_course_name_label">Course Name</string>
+    <string name="add_number_of_lectures">Number of Lectures</string>
+    <string name="add_students">Student name</string>
+    <string name="add">add student</string>
+    <string name="btn_add_course">Add course</string>
+    <string name="create_course">create course</string>
+    <string name="done">done</string>
+    <string name="view_database">view database</string>
+    <string name="label_batch">Batch</string>
+    <string name="label_lecture_number">Lecture Number</string>
+</resources>
