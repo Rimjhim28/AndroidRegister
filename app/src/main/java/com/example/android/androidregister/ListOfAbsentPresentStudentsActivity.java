@@ -182,23 +182,21 @@ public class ListOfAbsentPresentStudentsActivity extends AppCompatActivity {
     
      @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        if(!isDatabaseSaved){
-            DialogInterface.OnClickListener discardButtonClickListener = new DialogInterface.OnClickListener(){
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    //User clicked "Discard" button.close the current activity
-                    finish();
-                }
-            };
-            showUnsavedAttendanceDialog(discardButtonClickListener);
-        }
+         if(!isDatabaseSaved)
+           showUnsavedAttendanceDialog();
+        else
+            super.onBackPressed();
     }
 
-    public void showUnsavedAttendanceDialog(DialogInterface.OnClickListener discardButtonClickListener){
+    public void showUnsavedAttendanceDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.unsaved_changes_dialog_alert);
-        builder.setPositiveButton(R.string.discard,discardButtonClickListener);
+        builder.setPositiveButton(R.string.discard, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
         builder.setNegativeButton(R.string.save_database, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
