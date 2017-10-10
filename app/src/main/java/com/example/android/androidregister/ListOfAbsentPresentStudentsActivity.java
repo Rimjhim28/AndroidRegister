@@ -33,6 +33,7 @@ public class ListOfAbsentPresentStudentsActivity extends AppCompatActivity {
     private ArrayList<Integer> presentIds;
     private ArrayList<Integer> absentIds;
     private String batch;
+    private boolean isDatabaseSaved = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +85,7 @@ public class ListOfAbsentPresentStudentsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(ListOfAbsentPresentStudentsActivity.this, R.string.toast_attendance_is_saved, Toast.LENGTH_SHORT).show();
                 submitAttendance();
+                 isDatabaseSaved = true;
             }
         });
 
@@ -177,6 +179,36 @@ public class ListOfAbsentPresentStudentsActivity extends AppCompatActivity {
         }
 
     }
+    
+     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(!isDatabaseSaved){
+            DialogInterface.OnClickListener discardButtonClickListener = new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //User clicked "Discard" button.close the current activity
+                    finish();
+                }
+            };
+            showUnsavedAttendanceDialog(discardButtonClickListener);
+        }
+    }
+
+    public void showUnsavedAttendanceDialog(DialogInterface.OnClickListener discardButtonClickListener){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.unsaved_changes_dialog_alert);
+        builder.setPositiveButton(R.string.discard,discardButtonClickListener);
+        builder.setNegativeButton(R.string.save_database, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(dialog != null){
+                    dialog.dismiss();
+                }
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
 
 }
-
