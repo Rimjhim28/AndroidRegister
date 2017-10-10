@@ -19,4 +19,7 @@
     <string name="view_database">view database</string>
     <string name="label_batch">Batch</string>
     <string name="label_lecture_number">Lecture Number</string>
+    <string name="unsaved_changes_dialog_alert">The attendance is not saved</string>
+    <string name="discard">Discard</string>
+    <string name="save_database">Save Database</string>
 </resources>
