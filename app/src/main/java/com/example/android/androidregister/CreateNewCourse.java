@@ -67,7 +67,6 @@ public class CreateNewCourse extends AppCompatActivity {
         mNumberOfLectures = Integer.parseInt(mStringNumberOfLectures);
         BatchesDAO ob = new BatchesDAO(this);
         long id = ob.createBatch(mCourseName,mNumberOfLectures);
-        Toast.makeText(this,""+id,Toast.LENGTH_SHORT).show();
     }
 
     public void addStudent(){
@@ -76,12 +75,10 @@ public class CreateNewCourse extends AppCompatActivity {
         txtStudentName.setText("");
         StudentsDAO ob = new StudentsDAO(this);
         long id = ob.createStudent(mStudentName,mCourseName);
-        Toast.makeText(this,""+id+ " " + mCourseName,Toast.LENGTH_SHORT).show();
     }
 
     private void done(){
         Intent intent = new Intent(CreateNewCourse.this,MainActivity.class);
-        Toast.makeText(this,"Number of Students added:"+mNumberOfStudents,Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 }
