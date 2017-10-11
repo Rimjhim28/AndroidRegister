@@ -17,10 +17,6 @@ import com.example.android.androidregister.model.Student;
 
 import java.util.ArrayList;
 
-/**
- * Created by HP on 07-10-2017.
- */
-
 public class ListOfAbsentPresentStudentsActivity extends AppCompatActivity {
 
     private Button submitBtn;
