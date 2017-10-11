@@ -83,7 +83,6 @@ public class ListOfAbsentPresentStudentsActivity extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ListOfAbsentPresentStudentsActivity.this, R.string.toast_attendance_is_saved, Toast.LENGTH_SHORT).show();
                 submitAttendance();
                  isDatabaseSaved = true;
             }
