@@ -17,37 +17,35 @@ public class Attendance {
         mAbsentStudents = absentStudents;
     }
 
-    public void setBatchName(String batchName){
+    public void setBatchName(String batchName) {
         mBatchName = batchName;
     }
 
-    public String getBatchName(){
+    public String getBatchName() {
         return mBatchName;
     }
 
-    public void setLectureNumber(int lectureNumber){
+    public void setLectureNumber(int lectureNumber) {
         mLectureNumber = lectureNumber;
     }
-    public int getLectureNumber(){
+    
+    public int getLectureNumber() {
         return mLectureNumber;
     }
 
-    public void setPresentStudents(String presentStudents){
+    public void setPresentStudents(String presentStudents) {
         mPresentStudents = presentStudents;
     }
 
-    public String getPresentStudents(){
+    public String getPresentStudents() {
         return mPresentStudents;
     }
 
-    public void setAbsentStudents(String AbsentStudents){
+    public void setAbsentStudents(String AbsentStudents) {
         mPresentStudents = AbsentStudents;
     }
 
-    public String getAbsentStudents(){
+    public String getAbsentStudents() {
         return mAbsentStudents;
     }
-
-
 }
-
