@@ -8,12 +8,10 @@ import java.util.ArrayList;
 
 public class Student  {
 
-
     Integer uniqueId;
     String name;
     String batch;
     String image_url;
-
 
     public Student(Integer uniqueId, String name, String batch, String image_url) {
         this.uniqueId = uniqueId;
@@ -55,18 +53,10 @@ public class Student  {
     }
 
     public static ArrayList<Student> getDummyStudents(){
-
         ArrayList<Student> students = new ArrayList<>();
-
         for(int i = 0 ; i < 10 ; i++ ) {
-
             students.add(new Student(i, String.valueOf(i), i+"user", "www"));
-
         }
-
-
         return students;
-
     }
 }
-
