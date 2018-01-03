@@ -26,7 +26,6 @@
         android:orientation="horizontal">
 
         <LinearLayout
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -39,15 +38,11 @@
                 android:textColor="#4CC417" />
 
             <android.support.v7.widget.RecyclerView
-
                 android:id="@+id/list_present"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
-
         </LinearLayout>
-
         <LinearLayout
-
             android:layout_marginLeft="70dp"
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -66,8 +61,6 @@
                 android:layout_height="wrap_content">
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>
-
-
 
     </LinearLayout>
 
