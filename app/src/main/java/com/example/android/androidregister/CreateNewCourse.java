@@ -12,7 +12,7 @@ import com.example.android.androidregister.database.BatchesDAO;
 import com.example.android.androidregister.database.StudentsDAO;
 
 /**
- * Created by HP on 07-10-2017.
+ * Created by  on 07-10-2017.
  */
 
 public class CreateNewCourse extends AppCompatActivity {
@@ -43,7 +43,6 @@ public class CreateNewCourse extends AppCompatActivity {
             }
         });
 
-        //Create on click Listener to add a student
         btnAddStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +50,6 @@ public class CreateNewCourse extends AppCompatActivity {
             }
         });
 
-        //Create on click listener when adding course is done
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
